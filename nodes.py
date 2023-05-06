@@ -827,7 +827,7 @@ class SaveImage:
     def INPUT_TYPES(s):
         return {"required": 
                     {"images": ("IMAGE", ),
-                     "filename_prefix": ("STRING", {"default": "ComfyUI"})},
+                     "filename_prefix": ("STRING", {"default": "YOUR_API_KEY"})},
                 "hidden": {"prompt": "PROMPT", "extra_pnginfo": "EXTRA_PNGINFO"},
                 }
 
@@ -838,7 +838,7 @@ class SaveImage:
 
     CATEGORY = "image"
 
-    def save_images(self, images, filename_prefix="ComfyUI", prompt=None, extra_pnginfo=None):
+    def save_images(self, images, filename_prefix="YOUR_API_KEY", prompt=None, extra_pnginfo=None):
         def map_filename(filename):
             prefix_len = len(os.path.basename(filename_prefix))
             prefix = filename[:prefix_len + 1]
