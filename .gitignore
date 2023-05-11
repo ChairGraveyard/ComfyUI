@@ -12,3 +12,4 @@ extra_model_paths.yaml
 Lib/
 Scripts/
 share/
+!/src/comfy/ldm/models
