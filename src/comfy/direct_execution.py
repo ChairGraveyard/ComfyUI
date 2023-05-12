@@ -8,7 +8,7 @@ import traceback
 import gc
 
 import torch
-import nodes
+import comfy.nodes as nodes
 
 import comfy.model_management
 
