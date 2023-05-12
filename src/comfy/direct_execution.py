@@ -9,8 +9,7 @@ import gc
 
 import torch
 import comfy.nodes as nodes
-
-import comfy.model_management
+import comfy.model_management as model_management
 
 def get_input_data(inputs, class_def, unique_id, outputs={}, prompt={}, extra_data={}):
     valid_inputs = class_def.INPUT_TYPES()
@@ -204,7 +203,7 @@ class DirectPromptExecutor:
                 #     self.server.send_sync("executing", { "node": None }, self.server.client_id)
 
         gc.collect()
-        comfy.model_management.soft_empty_cache()
+        model_management.soft_empty_cache()
 
 
 def validate_inputs(prompt, item):
