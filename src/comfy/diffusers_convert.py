@@ -2,7 +2,7 @@ import json
 import os
 import yaml
 
-import folder_paths
+import comfy.folder_paths as folder_paths
 from comfy.ldm.util import instantiate_from_config
 from comfy.sd import ModelPatcher, load_model_weights, CLIP, VAE
 import os.path as osp

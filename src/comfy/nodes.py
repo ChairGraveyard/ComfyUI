@@ -25,7 +25,7 @@ import comfy.clip_vision
 import comfy.model_management
 import importlib
 
-import folder_paths
+import comfy.folder_paths as folder_paths
 
 def before_node_execution():
     comfy.model_management.throw_exception_if_processing_interrupted()
