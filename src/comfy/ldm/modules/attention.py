@@ -6,8 +6,8 @@ from torch import nn, einsum
 from einops import rearrange, repeat
 from typing import Optional, Any
 
-from ldm.modules.diffusionmodules.util import checkpoint
-from .sub_quadratic_attention import efficient_dot_product_attention
+from comfy.ldm.modules.diffusionmodules.util import checkpoint
+from comfy.sub_quadratic_attention import efficient_dot_product_attention
 
 from comfy import model_management
 
