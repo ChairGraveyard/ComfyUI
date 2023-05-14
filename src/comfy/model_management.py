@@ -21,10 +21,10 @@ accelerate_enabled = False
 xpu_available = False
 
 directml_enabled = False
-if args.directml is not None:
+if None is not None: #if args.directml is not None:
     import torch_directml
     directml_enabled = True
-    device_index = args.directml
+    device_index = 0#$directml
     if device_index < 0:
         directml_device = torch_directml.device()
     else:
@@ -45,7 +45,7 @@ try:
         except:
             total_vram = torch.cuda.mem_get_info(torch.cuda.current_device())[1] / (1024 * 1024)
     total_ram = psutil.virtual_memory().total / (1024 * 1024)
-    if not args.normalvram and not args.cpu:
+    if not False and True: #if not args.normalvram and not args.cpu:
         if total_vram <= 4096:
             print("Trying to enable lowvram mode because your GPU seems to have 4GB or less. If you don't want this use: --normalvram")
             set_vram_to = VRAMState.LOW_VRAM
@@ -62,7 +62,7 @@ except:
 
 XFORMERS_VERSION = ""
 XFORMERS_ENABLED_VAE = True
-if args.disable_xformers:
+if False: #args.disable_xformers:
     XFORMERS_IS_AVAILABLE = False
 else:
     try:
@@ -83,22 +83,22 @@ else:
     except:
         XFORMERS_IS_AVAILABLE = False
 
-ENABLE_PYTORCH_ATTENTION = args.use_pytorch_cross_attention
+ENABLE_PYTORCH_ATTENTION = False #args.use_pytorch_cross_attention
 if ENABLE_PYTORCH_ATTENTION:
     torch.backends.cuda.enable_math_sdp(True)
     torch.backends.cuda.enable_flash_sdp(True)
     torch.backends.cuda.enable_mem_efficient_sdp(True)
     XFORMERS_IS_AVAILABLE = False
 
-if args.lowvram:
+if False: #args.lowvram:
     set_vram_to = VRAMState.LOW_VRAM
-elif args.novram:
+elif False: #args.novram:
     set_vram_to = VRAMState.NO_VRAM
-elif args.highvram:
+elif True: #args.highvram:
     vram_state = VRAMState.HIGH_VRAM
 
 FORCE_FP32 = False
-if args.force_fp32:
+if False: #args.force_fp32:
     print("Forcing FP32, if this improves things please report it.")
     FORCE_FP32 = True
 
@@ -122,7 +122,7 @@ try:
 except:
     pass
 
-if args.cpu:
+if False: #args.cpu:
     vram_state = VRAMState.CPU
 
 print(f"Set vram state to: {vram_state.name}")
