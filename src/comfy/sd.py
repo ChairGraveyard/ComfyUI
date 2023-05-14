@@ -2,8 +2,8 @@ import torch
 import contextlib
 import copy
 
-import sd1_clip
-import sd2_clip
+import comfy.sd1_clip as sd1_clip
+import comfy.sd2_clip as sd2_clip
 from comfy import model_management
 from .ldm.util import instantiate_from_config
 from .ldm.models.autoencoder import AutoencoderKL
