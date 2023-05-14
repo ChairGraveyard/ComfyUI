@@ -7,7 +7,7 @@ from einops import rearrange, repeat
 from typing import Optional, Any
 
 from comfy.ldm.modules.diffusionmodules.util import checkpoint
-from comfy.sub_quadratic_attention import efficient_dot_product_attention
+from .sub_quadratic_attention import efficient_dot_product_attention
 
 from comfy import model_management
 
