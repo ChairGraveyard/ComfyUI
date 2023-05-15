@@ -21,7 +21,7 @@ if model_management.xformers_enabled():
 import os
 _ATTN_PRECISION = os.environ.get("ATTN_PRECISION", "fp32")
 
-from cli_args import args
+#from cli_args import args
 
 def exists(val):
     return val is not None
@@ -496,7 +496,7 @@ elif model_management.pytorch_attention_enabled():
     print("Using pytorch cross attention")
     CrossAttention = CrossAttentionPytorch
 else:
-    if args.use_split_cross_attention:
+    if False: #args.use_split_cross_attention:
         print("Using split optimization for cross attention")
         CrossAttention = CrossAttentionDoggettx
     else:
