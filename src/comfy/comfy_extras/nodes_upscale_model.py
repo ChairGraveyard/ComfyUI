@@ -1,9 +1,9 @@
 import os
-from comfy_extras.chainner_models import model_loading
+from .chainner_models import model_loading
 from comfy import model_management
 import torch
 import comfy.utils
-import folder_paths
+import comfy.folder_paths as folder_paths
 
 class UpscaleModelLoader:
     @classmethod

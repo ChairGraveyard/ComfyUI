@@ -24,9 +24,9 @@ import comfy.samplers
 import comfy.sd
 import comfy.utils
 import comfy.clip_vision
-import model_management
-import folder_paths as comfy_paths
-import model_management
+import comfy.model_management as model_management
+import comfy.folder_paths as comfy_paths
+import comfy.model_management as model_management
 import glob
 import hashlib
 import json
