@@ -41,6 +41,10 @@ input_directory = os.path.join(os.path.dirname(os.path.realpath(__file__)), "inp
 if not os.path.exists(input_directory):
     os.makedirs(input_directory)
 
+def set_custom_nodes_directory(custom_nodes_dir):
+    global folder_names_and_paths
+    folder_names_and_paths["custom_nodes"] = ([custom_nodes_dir], [])
+
 def set_output_directory(output_dir):
     global output_directory
     output_directory = output_dir
