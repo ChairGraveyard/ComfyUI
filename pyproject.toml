@@ -1,6 +1,6 @@
 [project]
 name = "comfyui_headless"
-version = "0.1.0"
+version = "0.2.0"
 description = "A headless server for comfyui in the cloud"
 
 [build-system]
