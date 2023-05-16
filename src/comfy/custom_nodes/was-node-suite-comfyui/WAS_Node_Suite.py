@@ -30,7 +30,7 @@ import comfy.model_management as model_management
 import glob
 import hashlib
 import json
-import nodes
+import comfy.nodes
 import math
 import numpy as np
 import os
