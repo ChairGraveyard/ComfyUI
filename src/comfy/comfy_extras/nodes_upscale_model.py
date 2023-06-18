@@ -1,5 +1,5 @@
 import os
-from .chainner_models import model_loading
+from comfy.comfy_extras.chainner_models import model_loading
 from comfy import model_management
 import torch
 import comfy.utils
