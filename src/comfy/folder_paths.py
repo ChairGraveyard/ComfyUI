@@ -127,7 +127,7 @@ def recursive_search(directory):
         for filepath in file:
             #we os.path,join directory with a blank string to generate a path separator at the end.
             result.append(os.path.join(root, filepath).replace(os.path.join(directory,''),''))
-            print("Inside recursive_search: " + result)
+            print("Inside recursive_search: " + str(result))
     return result
 
 def filter_files_extensions(files, extensions):
