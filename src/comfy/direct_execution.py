@@ -59,6 +59,11 @@ def recursive_execute(prompt, outputs, current_item, extra_data={}):
                 executed += recursive_execute(prompt, outputs, input_unique_id, extra_data)
 
     input_data_all = get_input_data(inputs, class_def, unique_id, outputs, prompt, extra_data)
+    if input_data_all is not None:
+        # Print json to console
+        print("Recusive Execute Input Data: ")
+        print(json.dumps(input_data_all, indent=4, sort_keys=True))
+
     # if server.client_id is not None:
     #     server.last_node_id = unique_id
     #     server.send_sync("executing", { "node": unique_id }, server.client_id)
