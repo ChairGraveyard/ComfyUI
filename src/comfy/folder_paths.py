@@ -137,9 +137,17 @@ def filter_files_extensions(files, extensions):
 
 def get_full_path(folder_name, filename):
     global folder_names_and_paths
+
+    print("Inside get_full_path: folder - " + str(folder_name) + ", filename - " + str(filename))
+
     folders = folder_names_and_paths[folder_name]
+
+    print("Inside get_full_path: folders - " + str(folders))
+
     for x in folders[0]:
+        print("Inside get_full_path: x - " + str(x))
         full_path = os.path.join(x, filename)
+        print("Inside get_full_path: full_path - " + str(full_path))
         if os.path.isfile(full_path):
             return full_path
 
